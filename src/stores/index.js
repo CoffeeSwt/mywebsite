@@ -1,3 +1,4 @@
-import { useMainStore } from "./mainStore";
+import { useMainStore } from './mainStore'
+import { useThemeStore } from './themeStore'
 
-export { useMainStore };
+export { useMainStore, useThemeStore }

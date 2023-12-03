@@ -1,12 +1,20 @@
 export const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: () => import('@/pages/Home/Home.vue'),
   },
   {
-    path: '/blog',
-    name: 'Blog',
-    component: () => import('@/pages/Blog/Blog.vue'),
+    path: '/layout',
+    name: 'layout',
+    component: () => import('@/layout/index.vue'),
+    children: [
+      {
+        //not '/blog'
+        path: 'blog',
+        name: 'blog',
+        component: () => import('@/pages/Blog/Blog.vue'),
+      },
+    ],
   },
 ]
